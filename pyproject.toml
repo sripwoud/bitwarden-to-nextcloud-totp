@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "bitwarden-to-nextcloud-totp"
+version = "0.1.0"
+description = ""
+authors = ["sripwoud <me@sripwoud.xyz>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+black = "^24.1.1"
+
+[tool.poetry.group.dev.dependencies]
+poethepoet = "^0.24.4"
+
+[tool.poe.tasks.format]
+help = "Format code using black"
+cmd = "black ."
+
+[tool.poe.tasks.exec]
+help = "Execute csv to vcf conversion script"
+cmd = "python -m main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
